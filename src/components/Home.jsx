@@ -14,7 +14,7 @@ function Home() {
           <p className="lg:text-7xl sm:text-3xl my-6 font-bold text-gray-600">EAT HEALTHY</p>
           <p className="lg:text-7xl sm:text-3xl my-6 font-bold text-gray-600">STAY HEALTHY</p>
           <Link to={"/register"} className="">
-            <button className="lg:text-4xl sm:text-2xl mt-10 lg:p-6 lg:px-10 lg:pb-7 sm:px-4 sm:p-4 font-semibold text-white bg-green-500 rounded-full shadow-xl">Get Started</button>
+            <button className="lg:text-4xl sm:text-2xl mt-10 lg:p-6 lg:px-10 lg:pb-7 sm:px-4 sm:p-4 font-semibold text-white bg-green-600 rounded-full shadow-xl">Get Started</button>
           </Link>
         </div>
         <img src="page-image.png" className="w-[700px] m-16 rounded-xl" />

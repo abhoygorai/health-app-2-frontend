@@ -26,8 +26,6 @@ function Icon({ id, open }) {
 }
 
 function Plan() {
-  const [open1, setOpen1] = useState(0);
-  const [open2, setOpen2] = useState(0);
   const { calory } = useParams();
   const [isLoading, setIsloading] = useState(true);
 
@@ -49,7 +47,7 @@ function Plan() {
           },
         }
       );
-      console.log(apidata.data);
+
       setBreakFaseFoods(apidata.data.breakfast);
       setLunchFoods(apidata.data.lunch);
       setDinnerFoods(apidata.data.dinner);
@@ -63,11 +61,29 @@ function Plan() {
     getData();
   }, []);
 
+  const [open1, setOpen1] = useState(0);
+  const [open2, setOpen2] = useState(0);
+  const [open3, setOpen3] = useState(0);
+  const [open4, setOpen4] = useState(0);
+  const [open5, setOpen5] = useState(0);
+  const [open6, setOpen6] = useState(0);
   const handleOpen1 = (value) => {
     setOpen1(open1 === value ? 0 : value);
   };
   const handleOpen2 = (value) => {
     setOpen2(open2 === value ? 0 : value);
+  };
+  const handleOpen3 = (value) => {
+    setOpen3(open3 === value ? 0 : value);
+  };
+  const handleOpen4 = (value) => {
+    setOpen4(open4 === value ? 0 : value);
+  };
+  const handleOpen5 = (value) => {
+    setOpen5(open5 === value ? 0 : value);
+  };
+  const handleOpen6 = (value) => {
+    setOpen6(open6 === value ? 0 : value);
   };
 
   if (isLoading) return <></>;
@@ -80,6 +96,9 @@ function Plan() {
       >
         <div className="flex justify-between">
           <div className="p-10 w-full">
+            <div className="w-full flex justify-center mb-5">
+              <p className="text-3xl font-bold text-gray-600">Diet Plan</p>
+            </div>
             <p className="text-2xl font-semibold text-green-700">Breakfast</p>
             {breakFastFooods.currentFoods.map((ele, index) => {
               return (
@@ -152,11 +171,11 @@ function Plan() {
             {lunchFoods.currentFoods.map((ele, index) => {
               return (
                 <Accordion
-                  open={open1 === index + 1}
-                  icon={<Icon id={1} open={open1} />}
+                  open={open2 === index + 1}
+                  icon={<Icon id={1} open={open2} />}
                   className="bg-white p-3 rounded-lg my-4"
                 >
-                  <AccordionHeader onClick={() => handleOpen1(index + 1)}>
+                  <AccordionHeader onClick={() => handleOpen2(index + 1)}>
                     <div className="flex justify-between w-full">
                       <div className="text-2xl ml-4 pb-1">{ele.name}</div>
                       <div className="mr-20 flex items-center">
@@ -220,11 +239,11 @@ function Plan() {
             {dinnerFoods.currentFoods.map((ele, index) => {
               return (
                 <Accordion
-                  open={open1 === index + 1}
-                  icon={<Icon id={1} open={open1} />}
+                  open={open3 === index + 1}
+                  icon={<Icon id={1} open={open3} />}
                   className="bg-white p-3 rounded-lg my-4"
                 >
-                  <AccordionHeader onClick={() => handleOpen1(index + 1)}>
+                  <AccordionHeader onClick={() => handleOpen3(index + 1)}>
                     <div className="flex justify-between w-full">
                       <div className="text-2xl ml-4 pb-1">{ele.name}</div>
                       <div className="mr-20 flex items-center">
@@ -286,15 +305,20 @@ function Plan() {
             })}
           </div>
           <div className="p-10 w-full">
+            <div className="w-full flex justify-center mb-5">
+              <p className="text-3xl font-bold text-gray-600">
+                Recommendations
+              </p>
+            </div>
             <p className="text-2xl font-semibold text-green-700">Breakfast</p>
             {breakFastFooods.moreFoods.map((ele, index) => {
               return (
                 <Accordion
-                  open={open2 === index + 1}
-                  icon={<Icon id={1} open={open2} />}
+                  open={open4 === index + 1}
+                  icon={<Icon id={1} open={open4} />}
                   className="bg-white p-3 rounded-lg my-4"
                 >
-                  <AccordionHeader onClick={() => handleOpen2(index + 1)}>
+                  <AccordionHeader onClick={() => handleOpen4(index + 1)}>
                     <div className="flex justify-between w-full">
                       <div className="text-2xl ml-4 pb-1">{ele.name}</div>
                       <div className="mr-20 flex items-center">
@@ -358,11 +382,11 @@ function Plan() {
             {lunchFoods.moreFoods.map((ele, index) => {
               return (
                 <Accordion
-                  open={open2 === index + 1}
-                  icon={<Icon id={1} open={open2} />}
+                  open={open5 === index + 1}
+                  icon={<Icon id={1} open={open5} />}
                   className="bg-white p-3 rounded-lg my-4"
                 >
-                  <AccordionHeader onClick={() => handleOpen2(index + 1)}>
+                  <AccordionHeader onClick={() => handleOpen5(index + 1)}>
                     <div className="flex justify-between w-full">
                       <div className="text-2xl ml-4 pb-1">{ele.name}</div>
                       <div className="mr-20 flex items-center">
@@ -426,11 +450,11 @@ function Plan() {
             {dinnerFoods.moreFoods.map((ele, index) => {
               return (
                 <Accordion
-                  open={open2 === index + 1}
-                  icon={<Icon id={1} open={open2} />}
+                  open={open6 === index + 1}
+                  icon={<Icon id={1} open={open6} />}
                   className="bg-white p-3 rounded-lg my-4"
                 >
-                  <AccordionHeader onClick={() => handleOpen2(index + 1)}>
+                  <AccordionHeader onClick={() => handleOpen6(index + 1)}>
                     <div className="flex justify-between w-full">
                       <div className="text-2xl ml-4 pb-1">{ele.name}</div>
                       <div className="mr-20 flex items-center">

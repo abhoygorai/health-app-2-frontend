@@ -56,16 +56,16 @@ function Register() {
       className="sm:container sm:mx-auto backdrop-blur-xl backdrop-brightness-90 rounded-3xl"
     >
       <div className=" flex justify-between">
-        <form className="p-10 m-12 flex flex-col rounded-3xl border-4 border-green-500">
-          <p className="text-5xl mb-5 font-semibold text-green-600">Register</p>
-          <p className="text-2xl text-green-600 py-1 mb-1">Name</p>
+        <form className="p-10 m-12 flex flex-col rounded-3xl border-4 border-green-600">
+          <p className="text-5xl mb-5 font-semibold text-green-700">Register</p>
+          <p className="text-2xl text-green-700 py-1 mb-1">Name</p>
           <input
             required
             type="text"
             className="p-2 px-4 rounded-2xl focus:outline-none w-[400px] text-xl text-green-600 font-semibold"
             onChange={(e) => setName(e.target.value)}
           />
-          <p className="text-2xl text-green-600 py-1 mb-1">Email</p>
+          <p className="text-2xl text-green-700 py-1 mb-1">Email</p>
           <input
             required
             type="email"
@@ -74,7 +74,7 @@ function Register() {
           />
           <div className="register-page-small-div">
             <div className="">
-              <p className="text-2xl text-green-600 py-1 mb-1">Gender</p>
+              <p className="text-2xl text-green-700 py-1 mb-1">Gender</p>
               <input
                 required
                 type="text"
@@ -83,7 +83,7 @@ function Register() {
               />
             </div>
             <div className="">
-              <p className="text-2xl text-green-600 py-1 mb-1">Age</p>
+              <p className="text-2xl text-green-700 py-1 mb-1">Age</p>
               <input
                 required
                 type="number"
@@ -92,23 +92,23 @@ function Register() {
               />
             </div>
           </div>
-          <p className="text-2xl text-green-600 py-1 mb-1">Body Weight(Kg)</p>
+          <p className="text-2xl text-green-700 py-1 mb-1">Body Weight(Kg)</p>
           <input
             required
             type="number"
             className="p-2 px-4 rounded-2xl focus:outline-none w-[400px] text-xl text-green-600 font-semibold"
             onChange={(e) => setWeight(e.target.value)}
           />
-          <p className="text-2xl text-green-600 py-1 mb-1">Password</p>
+          <p className="text-2xl text-green-700 py-1 mb-1">Password</p>
           <input
             required
             type="password"
-            className="p-2 px-4 rounded-2xl focus:outline-none w-[400px] text-xl text-green-600 font-semibold"
+            className="p-2 px-4 rounded-2xl focus:outline-none w-[400px] text-xl text-green-700 font-semibold"
             onChange={(e) => setPassword(e.target.value)}
           />
 
           <button
-            className="text-2xl py-2 mt-4 font-semibold text-white bg-green-500 rounded-full shadow-xl"
+            className="text-2xl py-2 mt-4 font-semibold text-white bg-green-600 rounded-full shadow-xl"
             onClick={submitForm}
           >
             Submit

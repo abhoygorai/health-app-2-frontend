@@ -36,7 +36,7 @@ function Login() {
       } else if (apidata.status === 200) {
         toast.success("Login Succesful");
         setTimeout(() => {
-          navigate("/plan");
+          navigate("/calories");
         }, 1000);
       } else if (apidata.status === 203) {
         toast.error("Wrong credentials");
@@ -54,10 +54,10 @@ function Login() {
     >
       <div className=" flex justify-between">
         <div className="flex items-center">
-          <form className="p-10 m-28 h-fit flex flex-col rounded-3xl border-4 border-green-500">
-            <p className="text-5xl mb-5 font-semibold text-green-600">Login</p>
+          <form className="p-10 m-28 h-fit flex flex-col rounded-3xl border-4 border-green-600">
+            <p className="text-5xl mb-5 font-semibold text-green-700">Login</p>
 
-            <p className="text-2xl text-green-600 py-1 mb-1">Email</p>
+            <p className="text-2xl text-green-700 py-1 mb-1">Email</p>
             <input
               required
               type="email"
@@ -65,7 +65,7 @@ function Login() {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <p className="text-2xl text-green-600 py-1 mb-1">Password</p>
+            <p className="text-2xl text-green-700 py-1 mb-1">Password</p>
             <input
               required
               type="password"
