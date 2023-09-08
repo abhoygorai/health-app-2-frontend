@@ -6,6 +6,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Plan from "./components/Plan";
 import Calories from "./components/Calories";
+import About from "./components/About";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path="/login" Component={Login} />
               <Route path="/calories" Component={Calories} />
               <Route path="/plan/:calory" Component={Plan} />
+              <Route path="/about" Component={About} />
 
             </Routes>
           </Router>
