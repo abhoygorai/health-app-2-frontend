@@ -37,7 +37,7 @@ function Plan() {
   const getData = async () => {
     try {
       const apidata = await axios.post(
-        "http://localhost:4000/api/v1/plan/calculate",
+        "https://healthapp-backend.onrender.com/api/v1/plan/calculate",
         {
           calories: parseInt(calory),
         },
@@ -48,6 +48,8 @@ function Plan() {
           },
         }
       );
+
+      console.log(apidata)
 
       let cal = 0;
       apidata.data.breakfast.currentFoods.map((ele, ind) => {
