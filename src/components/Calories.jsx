@@ -16,7 +16,7 @@ function Calories() {
       animate={{ opacity: 1 }}
       className="sm:container sm:mx-auto backdrop-blur-xl backdrop-brightness-90 rounded-3xl"
     >
-      <div className="flex justify-between items-center h-[75vh]">
+      <div className="flex justify-between items-center h-[65vh]">
         <div className="flex flex-col ml-10 p-10">
           <form className="p-10 h-fit flex flex-col rounded-3xl border-4 border-green-500">
             <p className="text-3xl font-semibold text-green-600 py-1 mb-2">
@@ -37,7 +37,7 @@ function Calories() {
             </button>
           </form>
         </div>
-        <img src="page-image.png" className="w-[650px] m-24 rounded-xl" />
+        <img src="page-image.png" className="w-[500px] m-24 rounded-xl" />
       </div>
     </motion.nav>
   );

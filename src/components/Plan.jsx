@@ -37,7 +37,7 @@ function Plan() {
   const getData = async () => {
     try {
       const apidata = await axios.post(
-        "https://healthapp-backend.onrender.com/api/v1/plan/calculate",
+        "http://localhost:4000/api/v1/plan/calculate",
         {
           calories: parseInt(calory),
         },
@@ -113,7 +113,7 @@ function Plan() {
           className="sm:container sm:mx-auto backdrop-blur-xl backdrop-brightness-90 rounded-3xl"
         >
           <div className="flex justify-between">
-            <div className="p-10 w-full">
+            <div className="p-12 break-words w-full">
               <div className="w-full flex justify-center mb-5">
                 <p className="text-3xl font-bold text-gray-600">Diet Plan</p>
               </div>
@@ -322,7 +322,7 @@ function Plan() {
                 );
               })}
             </div>
-            <div className="p-10 w-full">
+            <div className="p-12 break-words w-full">
               <div className="w-full flex justify-center mb-5">
                 <p className="text-3xl font-bold text-gray-600">
                   Recommendations

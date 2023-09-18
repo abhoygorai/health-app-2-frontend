@@ -16,8 +16,8 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" Component={Home} />
-              <Route path="/register" Component={Register} />
-              <Route path="/login" Component={Login} />
+              {/* <Route path="/register" Component={Register} /> */}
+              {/* <Route path="/login" Component={Login} /> */}
               <Route path="/calories" Component={Calories} />
               <Route path="/plan/:calory" Component={Plan} />
               <Route path="/about" Component={About} />
