@@ -39,7 +39,7 @@ function Plan() {
       const apidata = await axios.post(
         "https://healthapp-backend.onrender.com/api/v1/plan/calculate",
         {
-          calories: parseInt(calory),
+          calories: parseInt(calory) + 400,
         },
         {
           withCredentials: true,
