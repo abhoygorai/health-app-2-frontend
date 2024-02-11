@@ -26,7 +26,7 @@ function App() {
           </Router>
         
         <footer className="w-full mt-10 bg-green-500 h-20 flex justify-center items-center">
-          <p className="text-white text-xl">Developed by Ayush Juyal, Sanyam Sharma, Sani Vikrant 💻</p>
+          <p className="text-white text-xl">Copyright © 2024 HealthFull</p>
         </footer>
       </div>
     </AnimatePresence>
